@@ -1,0 +1,26 @@
+{
+  "name": "yt-proxy",
+  "version": "1.0.0",
+  "description": "<img src=\"https://github.com/arch-herobrine/yt-proxy/raw/main/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC.jpg\" width=\"100\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arch-herobrine/yt-proxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arch-herobrine/yt-proxy/issues"
+  },
+  "homepage": "https://github.com/arch-herobrine/yt-proxy#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "ytdl-core": "^4.11.2"
+  }
+}
