@@ -7,22 +7,16 @@ app.get("/",(req,res)=>{
     res.send('<a href="/youtube/">youtube proxyはこちら</a>')
 })
 app.get("/youtube", (req, res) => {
-    res.send(`<h1>YouTube Proxy</h1><form method="POST">
+    res.send(`<h1>YouTube Proxy</h1><form method="POST" autocomplete="off">
     <p>URL：<input type="text" name="url"></p>
     <p><input type="submit" value="GO"></p>
   </form>`)
 })
 app.post("/youtube",(req,res)=>{
-    function get(){
-        var obj={}
-        decodeURIComponent(Buffer.from(req.body).toString()).split(";").forEach(elem => {
-            const arr = elem.split("=");
-            obj[arr[0]] = decodeURIComponent(arr[1]);
-        });
-        return obj
-    }
+    
+        
     console.log(Buffer.from(req.body).toString())
-    res.redirect(`/youtube/${ytdl.getURLVideoID(get().url)}`)
+    res.redirect(`/youtube/${ytdl.getURLVideoID(decodeURIComponent(Buffer.from(req.body).toString()).split(";")[0].replace("url=",""))}`)
 })
 app.get("/youtube/:id", (req, res) => {
     var r = { id: req.params.id }

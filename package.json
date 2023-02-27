@@ -4,7 +4,8 @@
   "description": "<img src=\"https://github.com/arch-herobrine/yt-proxy/raw/main/%E3%83%AD%E3%83%BC%E3%83%89%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC.jpg\" width=\"100\">",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
   },
   "repository": {
     "type": "git",
